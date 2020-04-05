@@ -65,3 +65,9 @@ int _av_read_frame(AVFormatContext *fmt_ctx, AVPacket *pkt)
     return ret;
 }
 
+unsigned _av_format_version()
+{
+    return avformat_version();
+}
+
+

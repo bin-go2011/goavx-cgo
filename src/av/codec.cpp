@@ -73,3 +73,7 @@ int _av_codec_decode_audio4(AVCodecContext *avctx,
 	return ret;
 }                                              
 
+unsigned _av_codec_version() 
+{
+    return avcodec_version();
+}

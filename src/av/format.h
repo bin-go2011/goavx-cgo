@@ -13,6 +13,8 @@ void  _av_dump_format(AVFormatContext* fmt_ctx, char* filename);
 int _av_find_best_stream(AVFormatContext* fmt_ctx, AVMediaType media_type);
 int _av_read_frame(AVFormatContext *fmt_ctx, AVPacket *pkt);
 
+unsigned _av_format_version();
+
 #ifdef __cplusplus
 }
 #endif

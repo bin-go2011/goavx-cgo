@@ -15,6 +15,8 @@ int _av_codec_decode_audio4(AVCodecContext *avctx,
                                               int *got_frame_ptr,
                                               AVPacket *avpkt);
 
+unsigned _av_codec_version();
+
 #ifdef __cplusplus
 }
 #endif
