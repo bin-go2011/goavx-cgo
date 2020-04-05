@@ -1,6 +1,6 @@
 #include "packet.h"
 
-void av__init_packet(AVPacket* pkt)
+void _av_init_packet(AVPacket* pkt)
 {
     av_init_packet(pkt);
 }

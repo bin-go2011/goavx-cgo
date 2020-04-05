@@ -7,3 +7,6 @@ include_directories(${CMAKE_SOURCE_DIR}/src)
 
 add_executable(ffmpeg_test ffmpeg_test.cpp)
 target_link_libraries(ffmpeg_test Catch2::Catch2 ${FFMPEG_LIBRARIES} goav_cgo)
+
+add_executable(opencv_test opencv_test.cpp)
+target_link_libraries(opencv_test Catch2::Catch2 ${OpenCV_LIBS} gocv_cgo)

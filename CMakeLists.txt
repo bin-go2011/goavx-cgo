@@ -21,10 +21,13 @@ swscale
 swresample
 )
 
+find_package(OpenCV REQUIRED)
+
 include_directories(
     ${CMAKE_SOURCE_DIR}/src
     ${CMAKE_BINARY_DIR}
     ${FFMPEG_INCLUDE_DIRS}
+    ${OpenCV_INCLUDE_DIRS}
 )
 
 add_subdirectory(src)
