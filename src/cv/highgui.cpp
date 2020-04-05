@@ -13,3 +13,8 @@ void cv_imshow(const char* winname, MatPtr mat)
 {
     cv::imshow(winname, *mat);
 }
+
+void cv_destroy_window(const char* winname)
+{
+    cv::destroyWindow(winname);
+}
