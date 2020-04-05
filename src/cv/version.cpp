@@ -3,6 +3,6 @@
 #include <string>
 #include <sstream>
 
-void cv_version() {
-    std::cout << CV_VERSION << std::endl;
+int cv_version() {
+	return (CV_VERSION_MAJOR << 16) | (CV_VERSION_MINOR << 8) | (CV_VERSION_REVISION);
 }

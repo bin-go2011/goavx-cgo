@@ -58,7 +58,7 @@ int _av_read_frame(AVFormatContext *fmt_ctx, AVPacket *pkt)
 	//printf("pkt %p\n", pkt);
     //printf("pkt data %p\n", pkt->data);
 	//printf("pkt stream_index %p\n", &(pkt->stream_index));
-	print_payload((const unsigned char*)(pkt->data), pkt->size);
+	// print_payload((const unsigned char*)(pkt->data), pkt->size);
     //printf("pkt size %p, offset=%d\n", &(pkt->size), (char*)&(pkt->size) - (char*)pkt);
     //printf("pkt size=%d, stream_index=%d\n", pkt->size, pkt->stream_index);
 

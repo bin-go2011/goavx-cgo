@@ -6,7 +6,7 @@
 extern "C" {
 #endif  
 
-void cv_version();
+int cv_version();
 
 #ifdef __cplusplus
 }
