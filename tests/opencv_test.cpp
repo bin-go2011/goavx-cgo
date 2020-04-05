@@ -2,7 +2,7 @@
 #define CATCH_CONFIG_MAIN
 
 #include <catch.hpp>
-#include "cv/version.h"
+#include "cv/core.h"
 
 TEST_CASE("format context", "[opencv]" ) {
     cv_version();

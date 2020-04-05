@@ -2,7 +2,7 @@
 #define CV_HIGHGUI_API_H_
 
 #ifdef __cplusplus
-#include <opencv2/opencv.hpp>
+#include <opencv2/highgui.hpp>
 extern "C" {
 #endif  
 
