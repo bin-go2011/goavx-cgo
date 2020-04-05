@@ -7,7 +7,7 @@
  * differences of API usage between them. */
 static int refcount = 0;
 
-AVCodecContext* av__codec_open_context(AVFormatContext* fmt_ctx, int stream_idx)
+AVCodecContext* _av_codec_open_context(AVFormatContext* fmt_ctx, int stream_idx)
 {
     if (fmt_ctx == NULL) {
         return NULL;
@@ -52,7 +52,7 @@ AVCodecContext* av__codec_open_context(AVFormatContext* fmt_ctx, int stream_idx)
     return dec_ctx;
 }
 
-void av__codec_free_context(AVCodecContext* avctx)
+void _av_codec_free_context(AVCodecContext* avctx)
 {
     printf("free AVCodecContext %p\n", avctx);
     if (avctx == NULL) {
@@ -62,7 +62,7 @@ void av__codec_free_context(AVCodecContext* avctx)
     avcodec_free_context(&avctx);
 }
 
-int av__codec_decode_audio4(AVCodecContext *avctx,
+int _av_codec_decode_audio4(AVCodecContext *avctx,
                                               AVFrame *frame,
                                               int *got_frame_ptr,
                                               AVPacket *avpkt)

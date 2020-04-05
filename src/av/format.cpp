@@ -1,7 +1,7 @@
 #include "format.h"
 #include "common/utils.h"
 
-AVFormatContext* av__format_open_input(char* filename) {
+AVFormatContext* _av_format_open_input(char* filename) {
 	AVFormatContext *fmt_ctx = NULL;
 
     int ret;
@@ -20,7 +20,7 @@ AVFormatContext* av__format_open_input(char* filename) {
     return fmt_ctx;
 }
 
-void av__format_close_input(AVFormatContext* fmt_ctx) {
+void _av_format_close_input(AVFormatContext* fmt_ctx) {
 	printf("free AVFormatContext %p\n", fmt_ctx);
     if (fmt_ctx == NULL) {
         return;
@@ -30,7 +30,7 @@ void av__format_close_input(AVFormatContext* fmt_ctx) {
 	free(fmt_ctx);
 }
 
-void  av__dump_format(AVFormatContext* fmt_ctx, char* filename)
+void  _av_dump_format(AVFormatContext* fmt_ctx, char* filename)
 {
     if (fmt_ctx == NULL) {
         return;
@@ -39,7 +39,7 @@ void  av__dump_format(AVFormatContext* fmt_ctx, char* filename)
     av_dump_format(fmt_ctx, 0, filename, 0);
 }
 
-int av__find_best_stream(AVFormatContext* fmt_ctx, AVMediaType media_type)
+int _av_find_best_stream(AVFormatContext* fmt_ctx, AVMediaType media_type)
 {
     if (fmt_ctx == NULL) {
         return -1;
@@ -48,7 +48,7 @@ int av__find_best_stream(AVFormatContext* fmt_ctx, AVMediaType media_type)
     return av_find_best_stream(fmt_ctx, media_type, -1, -1, NULL, 0);
 }
 
-int av__read_frame(AVFormatContext *fmt_ctx, AVPacket *pkt)
+int _av_read_frame(AVFormatContext *fmt_ctx, AVPacket *pkt)
 {
 	if (fmt_ctx == NULL) {
 		return -1;

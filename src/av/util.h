@@ -7,9 +7,9 @@ extern "C" {
 
 #include <libavutil/frame.h>
 
-AVFrame* av__frame_alloc(void);
-void av__frame_free(AVFrame *frame);
-int av__get_bytes_per_sample(enum AVSampleFormat sample_fmt);
+AVFrame* _av_frame_alloc(void);
+void _av_frame_free(AVFrame* frame);
+int _av_get_bytes_per_sample(enum AVSampleFormat sample_fmt);
 
 #ifdef __cplusplus
 }

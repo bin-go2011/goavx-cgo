@@ -7,10 +7,10 @@ extern "C" {
 
 #include <libavformat/avformat.h>
 
-AVCodecContext* av__codec_open_context(AVFormatContext* fmt_ctx, int stream_idx);
-void av__codec_free_context(AVCodecContext* avctx);
+AVCodecContext* _av_codec_open_context(AVFormatContext* fmt_ctx, int stream_idx);
+void _av_codec_free_context(AVCodecContext* avctx);
 
-int av__codec_decode_audio4(AVCodecContext *avctx,
+int _av_codec_decode_audio4(AVCodecContext *avctx,
                                               AVFrame *frame,
                                               int *got_frame_ptr,
                                               AVPacket *avpkt);

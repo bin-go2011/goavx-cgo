@@ -7,9 +7,9 @@ extern "C" {
 
 #include <libavcodec/avcodec.h>
 
-void av__init_packet(AVPacket* pkt);
-AVPacket* av__packet_alloc(void);
-void av__free_packet(AVPacket *pkt);
+void _av_init_packet(AVPacket* pkt);
+AVPacket* _av_packet_alloc(void);
+void _av_free_packet(AVPacket *pkt);
 
 #ifdef __cplusplus
 }
