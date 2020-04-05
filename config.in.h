@@ -1,0 +1,1 @@
+#define SAMPLE_FILE_PATH "@CMAKE_SOURCE_DIR@/samples/big_buck_bunny.mp4"

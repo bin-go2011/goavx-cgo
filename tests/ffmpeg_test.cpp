@@ -8,15 +8,16 @@ extern "C" {
 #include "av/codec.h"
 #include "av/packet.h"
 #include "av/util.h"
+#include "config.h"
 }
 
-char* SAMPLE_FILE_PATH = R"(C:\Users\bji\Desktop\cv\ffmpeg-cgo\samples\big_buck_bunny.mp4)";
+char* SAMPLE_TESTING_FILE = SAMPLE_FILE_PATH;
 
 TEST_CASE("format context", "[avformat]" ) {
-    AVFormatContext* fmt_ctx = _av_format_open_input(SAMPLE_FILE_PATH);
+    AVFormatContext* fmt_ctx = _av_format_open_input(SAMPLE_TESTING_FILE);
     
     SECTION("dump input format"){
-	    _av_dump_format(fmt_ctx, SAMPLE_FILE_PATH);
+	    _av_dump_format(fmt_ctx, SAMPLE_TESTING_FILE);
     }
 
     SECTION("find best audio stream") {
@@ -35,7 +36,7 @@ TEST_CASE("format context", "[avformat]" ) {
 }
 
 TEST_CASE("codec context", "[avcodec]") {
-    AVFormatContext* fmt_ctx = _av_format_open_input(SAMPLE_FILE_PATH);
+    AVFormatContext* fmt_ctx = _av_format_open_input(SAMPLE_TESTING_FILE);
     SECTION("open audio codec") {
         AVCodecContext* dec_ctx = _av_codec_open_context(fmt_ctx, 0);
     }
