@@ -9,8 +9,6 @@ set(FFMPEG_ROOT $ENV{FFMPEG_ROOT})
 
 configure_file(config.in.h config.h)
 
-set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
-
 find_package(FFMPEG REQUIRED
 COMPONENTS
 avutil

@@ -1,4 +1,3 @@
-
 file(GLOB SRC_FILES ${CMAKE_CURRENT_LIST_DIR}/*.cpp)
 
 add_library(gocv_cgo ${SRC_FILES}
