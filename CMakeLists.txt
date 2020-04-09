@@ -22,7 +22,10 @@ swresample
 find_package(OpenCV REQUIRED)
 
 include_directories(
-    ${CMAKE_SOURCE_DIR}/src
+    ${CMAKE_SOURCE_DIR}/include/goavx
+    ${CMAKE_SOURCE_DIR}/include/goavx/av
+    ${CMAKE_SOURCE_DIR}/include/goavx/cv
+    ${CMAKE_SOURCE_DIR}/include/goavx/common
     ${CMAKE_BINARY_DIR}
     ${FFMPEG_INCLUDE_DIRS}
     ${OpenCV_INCLUDE_DIRS}
@@ -30,3 +33,10 @@ include_directories(
 
 add_subdirectory(src)
 add_subdirectory(tests)
+
+install(TARGETS goavx DESTINATION lib)
+install(DIRECTORY "${CMAKE_SOURCE_DIR}/include/goavx" # source directory
+        DESTINATION "include" # target directory
+        FILES_MATCHING # install only matched files
+        PATTERN "*.h" # select header files
+)

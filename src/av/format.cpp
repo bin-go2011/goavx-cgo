@@ -39,7 +39,7 @@ void  _av_dump_format(AVFormatContext* fmt_ctx, char* filename)
     av_dump_format(fmt_ctx, 0, filename, 0);
 }
 
-int _av_find_best_stream(AVFormatContext* fmt_ctx, AVMediaType media_type)
+int _av_find_best_stream(AVFormatContext* fmt_ctx, enum AVMediaType media_type)
 {
     if (fmt_ctx == NULL) {
         return -1;
