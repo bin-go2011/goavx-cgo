@@ -6,7 +6,6 @@
 extern "C" {
 #include "av/format.h"
 #include "av/codec.h"
-#include "av/packet.h"
 #include "av/util.h"
 #include "config.h"
 }

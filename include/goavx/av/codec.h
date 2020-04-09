@@ -5,7 +5,12 @@
 extern "C" {
 #endif        
 
+#include <libavcodec/avcodec.h>
 #include <libavformat/avformat.h>
+
+void _av_init_packet(AVPacket* pkt);
+AVPacket* _av_packet_alloc(void);
+void _av_free_packet(AVPacket *pkt);
 
 AVCodecContext* _av_codec_open_context(AVFormatContext* fmt_ctx, int stream_idx);
 void _av_codec_free_context(AVCodecContext* avctx);
