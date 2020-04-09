@@ -4,6 +4,6 @@
 #include <catch.hpp>
 #include "cv/core.h"
 
-TEST_CASE("format context", "[opencv]" ) {
-    cv_version();
+TEST_CASE("basic test", "[opencv]" ) {
+    std::cout << std::hex << cv_version() << std::endl;
 }
