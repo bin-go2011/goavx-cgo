@@ -22,10 +22,6 @@ swresample
 find_package(OpenCV REQUIRED)
 
 include_directories(
-    ${CMAKE_SOURCE_DIR}/include/goavx
-    ${CMAKE_SOURCE_DIR}/include/goavx/av
-    ${CMAKE_SOURCE_DIR}/include/goavx/cv
-    ${CMAKE_SOURCE_DIR}/include/goavx/common
     ${CMAKE_BINARY_DIR}
     ${FFMPEG_INCLUDE_DIRS}
     ${OpenCV_INCLUDE_DIRS}

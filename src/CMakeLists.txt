@@ -7,13 +7,11 @@ file(GLOB CV_SRC_FILES cv/*.cpp)
 if (WIN32)
 set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 add_library(goavx SHARED
-    common/utils.cpp
     ${AV_SRC_FILES}
     ${CV_SRC_FILES}
 )
 elseif (APPLE)
 add_library(goavx 
-    common/utils.cpp
     ${AV_SRC_FILES}
     ${CV_SRC_FILES}
 )
