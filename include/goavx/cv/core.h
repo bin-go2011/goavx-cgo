@@ -6,7 +6,11 @@
 extern "C" {
 #endif  
 
+#ifdef __cplusplus
 typedef cv::Mat* MatPtr;
+#else
+typedef void* MatPtr;
+#endif
 
 int cv_version();
 
