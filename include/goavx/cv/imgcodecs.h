@@ -8,7 +8,7 @@ extern "C" {
 
 #include "core.h"
 
-void _cv_imread(const char* filename, int flags, MatPtr mat);
+int _cv_imread(const char* filename, int flags, MatPtr mat);
 
 #ifdef __cplusplus
 }
