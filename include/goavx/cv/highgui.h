@@ -8,10 +8,10 @@ extern "C" {
 
 #include "core.h"
 
-void cv_named_window(const char* name, int flags);
-int cv_wait_key(int delay);
-void cv_imshow(const char* winname, MatPtr mat);
-void cv_destroy_window(const char* winname);
+void _cv_named_window(const char* name, int flags);
+int _cv_wait_key(int delay);
+void _cv_imshow(const char* winname, MatPtr mat);
+void _cv_destroy_window(const char* winname);
 
 #ifdef __cplusplus
 }

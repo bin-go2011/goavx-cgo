@@ -5,5 +5,5 @@
 #include "cv/core.h"
 
 TEST_CASE("basic test", "[opencv]" ) {
-    std::cout << std::hex << cv_version() << std::endl;
+    std::cout << std::hex << _cv_version() << std::endl;
 }

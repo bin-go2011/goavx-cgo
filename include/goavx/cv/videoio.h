@@ -10,9 +10,9 @@ extern "C" {
 
 typedef cv::VideoCapture* VideoCapturePtr;
 
-VideoCapturePtr cv_new_videocapture();
-int cv_videocapture_read(VideoCapturePtr v, MatPtr buf);
-bool cv_videocapture_opendevice(VideoCapturePtr v, int device);
+VideoCapturePtr _cv_new_videocapture();
+int _cv_videocapture_read(VideoCapturePtr v, MatPtr buf);
+bool _cv_videocapture_opendevice(VideoCapturePtr v, int device);
 
 #ifdef __cplusplus
 }

@@ -12,9 +12,9 @@ typedef cv::Mat* MatPtr;
 typedef void* MatPtr;
 #endif
 
-int cv_version();
+int _cv_version();
 
-MatPtr cv_new_mat();
+MatPtr _cv_new_mat();
 
 #ifdef __cplusplus
 }
