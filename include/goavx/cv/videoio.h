@@ -8,11 +8,17 @@ extern "C" {
 
 #include "core.h"
 
+#ifdef __cplusplus
 typedef cv::VideoCapture* VideoCapturePtr;
+#else
+typedef void* VideoCapturePtr;
+#endif
 
 VideoCapturePtr _cv_new_videocapture();
-int _cv_videocapture_read(VideoCapturePtr v, MatPtr buf);
-bool _cv_videocapture_opendevice(VideoCapturePtr v, int device);
+int _cv_videocapture_read(VideoCapturePtr cap, MatPtr buf);
+int _cv_videocapture_opendevice(VideoCapturePtr cap, int device);
+void _cv_release_videocapture(VideoCapturePtr cap);
+int _cv_videocapture_read(MatPtr buf);
 
 #ifdef __cplusplus
 }
