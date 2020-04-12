@@ -8,3 +8,8 @@ MatPtr _cv_new_mat()
 {
     return new cv::Mat();
 }
+
+void _cv_release_mat(MatPtr mat)
+{
+    delete mat;
+}

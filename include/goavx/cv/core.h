@@ -15,6 +15,7 @@ typedef void* MatPtr;
 int _cv_version();
 
 MatPtr _cv_new_mat();
+void _cv_release_mat(MatPtr mat);
 
 #ifdef __cplusplus
 }
