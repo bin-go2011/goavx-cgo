@@ -9,6 +9,7 @@ extern "C" {
 #include "core.h"
 
 void _cv_gaussian_blur(MatPtr src, MatPtr dst, int ksizeX, int ksizeY, double sigmaX, double sigmaY, int borderType);
+void _cv_pyrdown(MatPtr src, MatPtr dst);
 
 #ifdef __cplusplus
 }
