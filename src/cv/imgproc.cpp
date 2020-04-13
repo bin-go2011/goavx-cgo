@@ -14,3 +14,8 @@ void _cv_canny( MatPtr image, MatPtr edges, double threshold1, double threshold2
 {
     cv::Canny(*image, *edges, threshold1, threshold2, apertureSize, L2gradient);
 }
+
+void _cv_cvt_color( MatPtr src, MatPtr dst, int code)
+{
+    cv::cvtColor(*src, *dst, code);
+}

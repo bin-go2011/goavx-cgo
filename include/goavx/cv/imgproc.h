@@ -11,6 +11,7 @@ extern "C" {
 void _cv_gaussian_blur(MatPtr src, MatPtr dst, int ksizeX, int ksizeY, double sigmaX, double sigmaY, int borderType);
 void _cv_pyrdown(MatPtr src, MatPtr dst);
 void _cv_canny( MatPtr image, MatPtr edges, double threshold1, double threshold2, int apertureSize, int L2gradient);
+void _cv_cvt_color( MatPtr src, MatPtr dst, int code);
 
 #ifdef __cplusplus
 }
