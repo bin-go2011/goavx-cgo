@@ -19,6 +19,7 @@ int _cv_videocapture_read(VideoCapturePtr cap, MatPtr buf);
 int _cv_videocapture_open_device(VideoCapturePtr cap, int device);
 void _cv_release_videocapture(VideoCapturePtr cap);
 int _cv_videocapture_open_file(VideoCapturePtr cap, const char* filename);
+bool _cv_videocapture_is_opened(VideoCapturePtr cap);
 
 #ifdef __cplusplus
 }

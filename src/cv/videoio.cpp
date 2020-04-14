@@ -34,3 +34,9 @@ int _cv_videocapture_open_file(VideoCapturePtr cap, const char* filename)
 
     return ret;
 }
+
+bool _cv_videocapture_is_opened(VideoCapturePtr cap)
+{
+    return cap->isOpened();
+}
+
