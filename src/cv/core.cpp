@@ -23,3 +23,8 @@ int _cv_mat_cols(MatPtr mat)
 {
 	return mat->cols;
 }
+
+int _cv_mat_channels(MatPtr mat)
+{
+    return mat->channels();
+}
