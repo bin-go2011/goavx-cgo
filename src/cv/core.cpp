@@ -13,3 +13,13 @@ void _cv_release_mat(MatPtr mat)
 {
     delete mat;
 }
+
+int _cv_mat_rows(MatPtr mat)
+{
+    return mat->rows;
+}
+
+int _cv_mat_cols(MatPtr mat)
+{
+	return mat->cols;
+}
