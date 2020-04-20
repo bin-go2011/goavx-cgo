@@ -3,12 +3,10 @@
 
 #include <catch.hpp>
 
-extern "C" {
 #include "av/format.h"
 #include "av/codec.h"
 #include "av/util.h"
 #include "config.h"
-}
 
 char* SAMPLE_TESTING_FILE = SAMPLE_FILE_PATH;
 
