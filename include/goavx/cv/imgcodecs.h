@@ -9,6 +9,7 @@ extern "C" {
 #include "core.h"
 
 int _cv_imread(const char* filename, int flags, MatPtr mat);
+bool _cv_imwrite(const char* filename, MatPtr mat);
 
 #ifdef __cplusplus
 }
