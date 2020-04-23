@@ -15,6 +15,7 @@ void _cv_cvt_color(MatPtr src, MatPtr dst, int code);
 void _cv_median_blur(MatPtr src, MatPtr dst, int ksize);
 void _cv_laplacian(MatPtr src, MatPtr dst, int ddepth, int ksize = 1, double scale = 1, double delta = 0,
                              int borderType = cv::BORDER_DEFAULT );
+void _cv_threshold(MatPtr src, MatPtr dst, double thresh, double maxval, int type );
 
 #ifdef __cplusplus
 }

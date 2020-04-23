@@ -29,3 +29,8 @@ void _cv_laplacian(MatPtr src, MatPtr dst, int ddepth, int ksize, double scale, 
 {
     cv::Laplacian(*src, *dst, ddepth, ksize, scale, delta, borderType);
 }
+
+void _cv_threshold(MatPtr src, MatPtr dst, double thresh, double maxval, int type )
+{
+    cv::threshold(*src, *dst, thresh, maxval, type);
+}
