@@ -19,3 +19,13 @@ void _cv_cvt_color( MatPtr src, MatPtr dst, int code)
 {
     cv::cvtColor(*src, *dst, code);
 }
+
+void _cv_median_blur(MatPtr src, MatPtr dst, int ksize)
+{
+    cv::medianBlur(*src, *dst, ksize);
+}
+
+void _cv_laplacian(MatPtr src, MatPtr dst, int ddepth, int ksize, double scale, double delta, int borderType )
+{
+    cv::Laplacian(*src, *dst, ddepth, ksize, scale, delta, borderType);
+}

@@ -10,8 +10,11 @@ extern "C" {
 
 void _cv_gaussian_blur(MatPtr src, MatPtr dst, int ksizeX, int ksizeY, double sigmaX, double sigmaY, int borderType);
 void _cv_pyrdown(MatPtr src, MatPtr dst);
-void _cv_canny( MatPtr image, MatPtr edges, double threshold1, double threshold2, int apertureSize, bool L2gradient);
-void _cv_cvt_color( MatPtr src, MatPtr dst, int code);
+void _cv_canny(MatPtr image, MatPtr edges, double threshold1, double threshold2, int apertureSize, bool L2gradient);
+void _cv_cvt_color(MatPtr src, MatPtr dst, int code);
+void _cv_median_blur(MatPtr src, MatPtr dst, int ksize);
+void _cv_laplacian(MatPtr src, MatPtr dst, int ddepth, int ksize = 1, double scale = 1, double delta = 0,
+                             int borderType = cv::BORDER_DEFAULT );
 
 #ifdef __cplusplus
 }
