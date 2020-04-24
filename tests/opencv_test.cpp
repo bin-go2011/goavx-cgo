@@ -13,6 +13,8 @@ TEST_CASE("basic test", "[opencv]" ) {
 TEST_CASE("mat properties", "[opencv]") {
     MatPtr mat = _cv_new_mat();
 
+	MatPtr mat1 = _cv_new_mat_with(640, 480, CV_8UC3);
+	
     printf("rows offset: %d\n", (char*)(&mat->rows) - (char*)(mat));
 }
 

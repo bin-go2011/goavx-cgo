@@ -15,6 +15,7 @@ typedef void* MatPtr;
 int _cv_version();
 
 MatPtr _cv_new_mat();
+MatPtr _cv_new_mat_with(int width, int height, int matType);
 void _cv_release_mat(MatPtr mat);
 
 int _cv_mat_channels(MatPtr mat);
