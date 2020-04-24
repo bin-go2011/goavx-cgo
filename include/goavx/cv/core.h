@@ -18,6 +18,7 @@ MatPtr _cv_new_mat();
 void _cv_release_mat(MatPtr mat);
 
 int _cv_mat_channels(MatPtr mat);
+void _cv_mat_size(MatPtr mat, int* width, int* height);
 
 #ifdef __cplusplus
 }

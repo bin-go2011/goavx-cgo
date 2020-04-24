@@ -18,3 +18,10 @@ int _cv_mat_channels(MatPtr mat)
 {
     return mat->channels();
 }
+
+void _cv_mat_size(MatPtr mat, int* width, int* height)
+{
+    cv::Size size = mat->size();
+    *width = size.width;
+    *height = size.height;
+}
