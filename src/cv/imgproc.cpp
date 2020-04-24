@@ -34,3 +34,8 @@ void _cv_threshold(MatPtr src, MatPtr dst, double thresh, double maxval, int typ
 {
     cv::threshold(*src, *dst, thresh, maxval, type);
 }
+
+void _cv_resize(MatPtr src, MatPtr dst, cv::Size dsize, double inv_scale_x, double inv_scale_y, int interpolation)
+{
+    cv::resize(*src, *dst, dsize, inv_scale_x, inv_scale_y, interpolation);
+}
