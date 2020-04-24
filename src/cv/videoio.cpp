@@ -40,7 +40,7 @@ bool _cv_videocapture_is_opened(VideoCapturePtr cap)
     return cap->isOpened();
 }
 
-int _cv_videocapture_get(VideoCapturePtr cap, int propId)
+void _cv_videocapture_get(VideoCapturePtr cap, int propId, double* propValue)
 {
-    return cap->get(propId);
+    *propValue = cap->get(propId);
 }
