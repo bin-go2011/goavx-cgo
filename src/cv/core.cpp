@@ -14,6 +14,11 @@ MatPtr _cv_new_mat_with(int width, int height, int matType)
     return new cv::Mat(width, height, matType);
 }
 
+MatPtr _cv_new_mat_from_size(cv::Size size, int type)
+{
+    return new cv::Mat(size, type);
+}
+
 void _cv_release_mat(MatPtr mat)
 {
     delete mat;
