@@ -39,3 +39,10 @@ void _cv_resize(MatPtr src, MatPtr dst, cv::Size dsize, double inv_scale_x, doub
 {
     cv::resize(*src, *dst, dsize, inv_scale_x, inv_scale_y, interpolation);
 }
+
+void _cv_bilateral_filter( MatPtr src, MatPtr dst, int d,
+                                   double sigmaColor, double sigmaSpace,
+                                   int borderType)
+{
+    cv::bilateralFilter(*src, *dst, d, sigmaColor, sigmaSpace, borderType);
+}

@@ -19,6 +19,10 @@ void _cv_threshold(MatPtr src, MatPtr dst, double thresh, double maxval, int typ
 void _cv_resize(MatPtr src, MatPtr dst, cv::Size dsize, double fx = 0, double fy = 0,
                           int interpolation = cv::INTER_LINEAR );
 
+void _cv_bilateral_filter( MatPtr src, MatPtr dst, int d,
+                                   double sigmaColor, double sigmaSpace,
+                                   int borderType = cv::BORDER_DEFAULT );
+
 #ifdef __cplusplus
 }
 #endif
