@@ -35,3 +35,8 @@ void _cv_mat_size(MatPtr mat, int* width, int* height)
     *width = size.width;
     *height = size.height;
 }
+
+void _cv_mat_copy_to(MatPtr src, MatPtr dst, MatPtr mask)
+{
+    src->copyTo(*dst, *mask);
+}

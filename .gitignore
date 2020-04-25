@@ -2,3 +2,4 @@ build
 samples
 .idea
 cmake-build-debug
+settings.json
