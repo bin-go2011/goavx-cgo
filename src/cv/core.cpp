@@ -40,3 +40,8 @@ void _cv_mat_copy_to(MatPtr src, MatPtr dst, MatPtr mask)
 {
     src->copyTo(*dst, *mask);
 }
+
+void _cv_mat_set_to(MatPtr mat, int value)
+{
+    mat->setTo(value);
+}
